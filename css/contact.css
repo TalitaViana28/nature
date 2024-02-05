@@ -1,0 +1,146 @@
+* 
+{
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+.contact-general {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 100px;
+}
+
+.contact-general::before{
+  content: "";
+  display: block;
+  height: 8px;
+  width: 100%;
+  background-color:  var(--cor-p3);
+  position: absolute;
+  margin-top: -50px;
+}
+
+
+.contact-form {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.name, .email, .message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.name input,
+.email input {
+  border-radius: 3px;
+  border: none;
+  background-color: var(--cor-3);
+  padding: 15px;
+}
+
+.message textarea {
+  border-radius: 3px;
+  border: none;
+  background-color: var(--cor-3);
+  padding: 15px;
+}
+
+.contact-form button {
+  border-radius: 3px;
+  border: none;
+  background-color: var(--cor-p3);
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #ECB381;
+  transition: .3s;
+}
+
+.contact-address {
+  margin-top: 50px;
+}
+
+.contact1 h2,
+.contact2 h2,
+.contact3 h2{
+  margin-bottom: 5px;
+}
+
+.contact1 p,
+.contact2 p {
+  margin-bottom: 25px;
+}
+
+.line {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 50%;
+  background-color:  var(--cor-p3);
+  margin-bottom: 25px;
+}
+
+@media (max-width: 800px) {
+  .contact-general {
+    grid-template-columns: 1fr;
+    margin-top: 100px;
+  }
+  .contact-form {
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+  }
+  .contact-address {
+    display: flex;  
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  .line {
+    content: "";
+    display: block;
+    height: 80%;
+    width: 2px;
+    background-color:  var(--cor-p3);
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-form {
+    margin-bottom: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 25px;
+  }
+  .contact-address {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+  }
+}
